@@ -92,7 +92,6 @@ for w in clusters:
     plt.show()
 
 
-    #GMM PART INCOMING!!!!!!!!!!!!!!!!!!!!!!!!!!
 for w in clusterForGMM:
     GMM = sklearn.mixture.GMM(n_components=w
                                       ).fit(X_t)
