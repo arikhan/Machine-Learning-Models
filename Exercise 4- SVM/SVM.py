@@ -20,7 +20,6 @@ x_train, x_validation_and_test, y_train, y_validation_and_test = train_test_spli
 x_validation, x_test, y_validation, y_test = train_test_split(x_validation_and_test, y_validation_and_test, test_size=.6)
 
 h = 0.01
-#1/3 ün 4. sorusu burada
 for w in Cset:
     svc = svm.SVC(kernel='linear', C=w).fit(x_train, y_train)
     rbf_svc = svm.SVC(kernel='rbf', gamma='auto', C=w).fit(x_train, y_train)
@@ -121,7 +120,6 @@ plt.title(titles[i])
 plt.show()
 print("The accuracy of test sets is: %0.5f" %(grid.score(x_test,y_test)))
 
-#For K-Fold we know what to do. 
 x_trainVal = np.concatenate((x_train, x_validation), axis=0)
 y_trainVal = np.concatenate((y_train,y_validation), axis=0)
 
